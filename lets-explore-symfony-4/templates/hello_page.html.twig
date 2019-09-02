@@ -3,7 +3,14 @@
 {% block title %} Custom Title {% endblock %}
 
 {% block main %} 
- {#{dump()}#}
- Hello, {{ app.request.query.get('name') | default('CodeReviewVideos') }}!
+
+  <br/>
+  <br/>    
+  <h1>hello, {{name}} </h1>
+
+  <div>  	 
+  	 <p>My variable: {{ some_variable | default('No variable set')}}</p>
+  	 <p>{{another_variable| default('No variable set_ 2')}}</p>
+  </div>
 
 {% endblock %}

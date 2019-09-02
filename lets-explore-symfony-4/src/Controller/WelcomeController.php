@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class WelcomeController extends AbstractController
 {
@@ -16,4 +18,20 @@ class WelcomeController extends AbstractController
             'controller_name' => 'WelcomeController',
         ]);
     }
+
+    /**
+     * @Route("/hello_page/{name}",
+     *      name="hello_page",
+     *     defaults={"name" = "CodeReviewVidoes"},
+     *     requirements = {"name"="[A-Za-z]+"
+     * })
+     */
+    public function hello($name='Chris'){
+    	return $this->render('hello_page.html.twig',
+    		[
+    			'name' =>$name,
+    		]
+    	);
+    }
 }
+ 

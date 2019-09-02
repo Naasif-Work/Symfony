@@ -30,6 +30,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{(path('hello_page'))}}">Hello Page</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{(path('contact'))}}">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -38,6 +41,9 @@
     </header>
 
     <main role="main" class="container main">
+
+        {% include 'flash_messages.html.twig' %}
+
         {% block main %}{% endblock main %}
         </div>
     </main>
